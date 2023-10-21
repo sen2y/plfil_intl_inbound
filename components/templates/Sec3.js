@@ -1,23 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
+import useIsMobile from "../../libs/useIsMobile";
 
 const Sec3 = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // 클라이언트 측에서만 실행되도록 useEffect 내부에서 window 객체 사용
-    const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
-    };
-
-    checkIsMobile(); // 초기 로드 시 체크
-    window.addEventListener("resize", checkIsMobile); // 창 크기 변경 감지
-
-    // 컴포넌트가 언마운트될 때 리스너 제거
-    return () => {
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, []);
+  const isMobile = useIsMobile();
 
   return (
     <Wrapper>

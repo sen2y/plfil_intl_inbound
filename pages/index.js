@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import Banner from "../components/Banner";
-import Sec1 from "../components/Sec1";
-import Sec2 from "../components/Sec2";
-import Sec3 from "../components/Sec3";
+import Banner from "../components/templates/Banner";
+import Sec1 from "../components/templates/Sec1";
+import Sec2 from "../components/templates/Sec2";
+import Sec3 from "../components/templates/Sec3";
 import { Helmet } from "react-helmet";
+import Sec3Section from "@/components/organisms/Sec3Section";
 
 export default function Home() {
   return (
