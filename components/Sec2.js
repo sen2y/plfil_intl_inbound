@@ -5,14 +5,21 @@ const Sec1 = () => {
   return (
     <Wrapper>
       <Sec2_Container>
-        <Sec2_img width="483px" src="/assets/image/sec2_img1.png" />
+        <Sec2_img
+          width="483px"
+          src="/assets/image/sec2_img1.png"
+          alt="Korean actor casting platform Plfil"
+        />
         <Sec2_InnerContainer>
           <Sec2_InnerText>
             배우 뿐만 아니라
             <br />
             촬영 스태프도 구인 가능합니다.
           </Sec2_InnerText>
-          <Sec2_InnerImg src="/assets/image/sec2_img2.png" />
+          <Sec2_InnerImg
+            src="/assets/image/sec2_img2.png"
+            alt="Korean actor casting platform Plfil"
+          />
           <Sec2_InnerSubText>
             영어로 소통이 가능하며,
             <br />

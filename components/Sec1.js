@@ -11,7 +11,7 @@ const Sec1 = () => {
           <Sec1_img
             width={"138px"}
             src="/assets/image/sec1_img1.png"
-            alt="sec1_img1"
+            alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText width={"178px"}>
             영어 / 일어 가능한 배우 리스트 보유중
@@ -22,7 +22,7 @@ const Sec1 = () => {
             marginLeft={"11.5px"}
             width={"167px"}
             src="/assets/image/sec1_img2.png"
-            alt="sec1_img2"
+            alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText width={"178px"}>
             오디션 공간 대여, 스케쥴링 문의 가능
@@ -32,7 +32,7 @@ const Sec1 = () => {
           <Sec1_img
             width={"123px"}
             src="/assets/image/sec1_img3.png"
-            alt="sec1_img3"
+            alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText width={"138px"}>캐스팅 피 출연료의 10%</Sec1_SubText>
         </Sec1_Container>

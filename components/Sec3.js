@@ -5,7 +5,10 @@ const Sec3 = () => {
   return (
     <Wrapper>
       <Sec3_Container>
-        <Sec3_img src="/assets/image/sec3_img1.png"></Sec3_img>
+        <Sec3_img
+          src="/assets/image/sec3_img1.png"
+          alt="플필이 보유한 2만여명의 배우 캐스팅 가능 이미지"
+        ></Sec3_img>
 
         <Sec3_InnerText>
           플필에는 약 2만여명의 배우들이
