@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Banner from "../components/Banner";
 import Sec1 from "../components/Sec1";
 import Sec2 from "../components/Sec2";
+import Sec3 from "../components/Sec3";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <Banner />
       <Sec1 />
       <Sec2 />
-      <Sec3></Sec3>
+      <Sec3 />
     </Wrapper>
   );
 }
@@ -19,10 +20,4 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
-`;
-
-const Sec3 = styled.div`
-  width: 1440px;
-  height: 1312px;
-  background-color: green;
 `;
