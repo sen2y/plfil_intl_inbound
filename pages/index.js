@@ -37,6 +37,7 @@ export default function Home() {
 Home.title = "플필 - 한국 배우 캐스팅 서비스"; // Home 페이지의 타이틀 설정
 
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
