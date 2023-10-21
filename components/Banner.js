@@ -71,6 +71,7 @@ const Banner_Header = styled.div`
   @media (max-width: 768px) {
     margin: 0px;
     height: 35px;
+    margin-top: 12px;
     top: 0;
     justify-content: space-between;
     width: 100%;
@@ -92,7 +93,6 @@ const Logo = styled.p`
   /* mobile 버전 */
   @media (max-width: 768px) {
     margin-left: 28px;
-    margin-top: 12px;
     font-size: 28px;
     line-height: 35.33px;
   }
@@ -115,7 +115,7 @@ const HeaderBtn2 = styled.button`
 
   /* mobile 버전 */
   @media (max-width: 768px) {
-    margin: 14px 28px 0px 0px;
+    margin: 2px 28px 0px 0px;
     width: 133px;
     height: 30px;
     font-size: 12px;
