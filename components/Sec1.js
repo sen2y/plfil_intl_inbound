@@ -4,9 +4,8 @@ import styled from "styled-components";
 const Sec1 = () => {
   return (
     <Wrapper>
-      <div>
-        <Sec1_Title>한국 배우가 필요하시다면 빠르게 찾아드립니다</Sec1_Title>
-      </div>
+      <Sec1_Title>한국 배우가 필요하시다면 빠르게 찾아드립니다</Sec1_Title>
+
       <Container_Wrapper>
         <Sec1_Container>
           <Sec1_img
