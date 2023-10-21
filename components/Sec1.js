@@ -28,7 +28,7 @@ const Sec1 = () => {
           {/* 이 부분 글자랑 이미지 간격이 잘 안맞아서 임의로 마진값 설정함. */}
           <Sec1_img
             width={isMobile ? "92px" : "138px"}
-            src="/assets/image/sec1_img1.png"
+            src="/assets/image/sec1/sec1_img1.png"
             alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText width={isMobile ? "119px" : "178px"}>
@@ -39,7 +39,7 @@ const Sec1 = () => {
           <Sec1_img
             marginLeft={"11.5px"}
             width={isMobile ? "106px" : "167px"}
-            src="/assets/image/sec1_img2.png"
+            src="/assets/image/sec1/sec1_img2.png"
             alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText width={isMobile ? "119px" : "178px"}>
@@ -49,7 +49,7 @@ const Sec1 = () => {
         <Sec1_Container>
           <Sec1_img
             width={isMobile ? "82px" : "123px"}
-            src="/assets/image/sec1_img3.png"
+            src="/assets/image/sec1/sec1_img3.png"
             alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText width={isMobile ? "92px" : "138px"}>
@@ -128,15 +128,13 @@ const Sec1_Container = styled.div`
   margin-right: 24px;
 
   @media (max-width: 768px) {
-    margin-right: 0px;
+    margin: 0px 0px 20px 0px;
     height: 174px;
-    margin-bottom: 20px;
   }
 `;
 
 const Sec1_img = styled.img`
   width: ${(props) => props.width};
-  /* margin-top: 50px; */
   margin-left: ${(props) => props.marginLeft || "0px"};
 `;
 

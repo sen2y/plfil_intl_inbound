@@ -29,8 +29,8 @@ const Banner = () => {
         isMobile={isMobile}
         src={
           isMobile
-            ? "/assets/image/global_banner_mo.png"
-            : "/assets/image/global_banner.png"
+            ? "/assets/image/banner/global_banner_mo.png"
+            : "/assets/image/banner/global_banner.png"
         }
         alt="banner"
       />
@@ -69,9 +69,8 @@ const Banner_Header = styled.div`
 
   /* mobile 버전 */
   @media (max-width: 768px) {
-    margin: 0px;
+    margin: 12px 0px 0px 0px;
     height: 35px;
-    margin-top: 12px;
     top: 0;
     justify-content: space-between;
     width: 100%;
@@ -87,7 +86,7 @@ const Logo = styled.p`
   align-items: center;
   color: transparent;
   background-image: linear-gradient(93.27deg, #ff1744 0%, #ff4512 100%);
-  background-clip: text; /* 텍스트만 그라데이션을 보이도록 클리핑 */
+  background-clip: text; //텍스트만 그라데이션을 보이도록 클리핑
   -webkit-background-clip: text; /* 웹킷 브라우저 지원을 위해 추가*/
 
   /* mobile 버전 */

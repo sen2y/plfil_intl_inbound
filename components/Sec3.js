@@ -25,8 +25,8 @@ const Sec3 = () => {
         <Sec3_img
           src={
             isMobile
-              ? "/assets/image/sec3_img1_mo.png"
-              : "/assets/image/sec3_img1.png"
+              ? "/assets/image/sec3/sec3_img1_mo.png"
+              : "/assets/image/sec3/sec3_img1.png"
           }
           alt="Korean actor casting platform Plfil"
         ></Sec3_img>
@@ -45,6 +45,35 @@ const Sec3 = () => {
           </Sec3_InnerText>
         )}
       </Sec3_Container>
+      {isMobile ? (
+        <Sec3_MoImgContainer>
+          <Sec3_MoImg
+            src="/assets/image/sec3/sec3_sub1.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec3_MoImg
+            src="/assets/image/sec3/sec3_sub2.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec3_MoImg
+            src="/assets/image/sec3/sec3_sub3.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec3_MoImg
+            src="/assets/image/sec3/sec3_sub4.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec3_MoImg
+            src="/assets/image/sec3/sec3_sub5.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec3_MoImg
+            src="/assets/image/sec3/sec3_sub6.png"
+            alt="Korean actor casting platform Plfil"
+          />
+        </Sec3_MoImgContainer>
+      ) : null}
+
       <Sec3_Text>
         플필을 통해
         <br />
@@ -84,12 +113,43 @@ const Sec3_Container = styled.div`
     margin-top: 100px;
     top: 0px;
     width: 343px;
-    height: 500px;
+    height: 347px; //500px;
     /* background-color: blue; */
   }
 `;
 
 const Sec3_img = styled.img``;
+
+const Sec3_MoImgContainer = styled.div`
+  // mobile 버전
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0px;
+    width: calc(100% - 28px); /* 전체 너비에서 28px을 뺀 너비 사용 */
+    height: 100px;
+    margin-top: 12px;
+    white-space: nowrap; /* 컴포넌트들이 가로로 나란히 위치하게 함 */
+
+    overflow-x: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+`;
+
+const Sec3_MoImg = styled.img`
+  // mobile 버전
+  @media (max-width: 768px) {
+    position: relative;
+    top: 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 2px;
+    &:not(:last-child) {
+      margin-right: 12px; /* 마지막 요소가 아닌 경우에만 간격을 12px로 설정 */
+    }
+  }
+`;
 
 const Sec3_InnerText = styled.h2`
   position: absolute;
@@ -131,7 +191,7 @@ const Sec3_Text = styled.div`
   @media (max-width: 768px) {
     position: relative;
     top: 0px;
-    margin-top: 100px;
+    margin-top: 140px;
     width: 257px;
     height: 129px;
     font-size: 36px;

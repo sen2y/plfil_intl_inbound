@@ -24,7 +24,7 @@ const Sec2 = () => {
       <Sec2_Container>
         <Sec2_img
           width={isMobile ? "343px" : "483px"}
-          src="/assets/image/sec2_img1.png"
+          src="/assets/image/sec2/sec2_img1.png"
           alt="Korean actor casting platform Plfil"
         />
         <Sec2_InnerContainer>
@@ -45,7 +45,7 @@ const Sec2 = () => {
           )}
           <Img_Wrapper>
             <Sec2_InnerImg
-              src="/assets/image/sec2_img2.png"
+              src="/assets/image/sec2/sec2_img2.png"
               alt="Korean actor casting platform Plfil"
             />
           </Img_Wrapper>
@@ -140,18 +140,15 @@ const Sec2_InnerText = styled.h3`
 const Sec2_InnerImg = styled.img`
   width: 101px;
   height: 101px;
-  margin-left: 437px;
-  margin-top: 80px;
+  margin: 80px 0px 0px 437px;
 
   @media (max-width: 768px) {
-    margin-left: 0;
-    margin-top: 40px;
+    margin: 40px 0px 0px 0px;
   }
 `;
 
 const Sec2_InnerSubText = styled.p`
-  margin-top: 36px;
-  margin-left: 155px;
+  margin: 36px 0px 0px 155px;
   width: 382px;
   height: 87px;
   font-weight: 600;
