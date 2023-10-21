@@ -66,7 +66,7 @@ const HeaderBtn2 = styled.button`
 
 const Banner_Img = styled.img``;
 
-const Banner_Text = styled.h1`
+const Banner_Text = styled.h3`
   font-size: 60px;
   font-weight: 800;
   line-height: 71.6px;
