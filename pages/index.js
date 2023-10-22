@@ -3,27 +3,28 @@ import Banner from "../components/templates/Banner";
 import Sec1 from "../components/templates/Sec1";
 import Sec2 from "../components/templates/Sec2";
 import Sec3 from "../components/templates/Sec3";
-import { Helmet } from "react-helmet";
-import Sec3Section from "@/components/organisms/Sec3Section";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title></title>
-        <meta
-          name="title"
-          content="Plfil - All In One Korean Actor Casting Platform for Global Casting Directors"
-        />
-        <meta
-          name="description"
-          content="Korean actor Online Casting Platform, Take a look at the massive database of actors and cast rising stars. Find Korean actors/actresses for your project"
-        />
-        <meta
-          name="keywords"
-          content="global, plfil, casting, casting platform, actor's profile, rising stars, casting board, korean top star, korean actors, korean casti0ng, korean actor, korean actress, korean actor casting, korean actor casting platform, korean actor casting service, korean actor casting website, korean actor casting site, "
-        />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <title></title>
+          <meta
+            name="title"
+            content="Plfil - All In One Korean Actor Casting Platform for Global Casting Directors"
+          />
+          <meta
+            name="description"
+            content="Korean actor Online Casting Platform, Take a look at the massive database of actors and cast rising stars. Find Korean actors/actresses for your project"
+          />
+          <meta
+            name="keywords"
+            content="global, plfil, casting, casting platform, actor's profile, rising stars, casting board, korean top star, korean actors, korean casti0ng, korean actor, korean actress, korean actor casting, korean actor casting platform, korean actor casting service, korean actor casting website, korean actor casting site, "
+          />
+        </Helmet>
+      </HelmetProvider>
       <Wrapper>
         <Banner />
         <Sec1 />
