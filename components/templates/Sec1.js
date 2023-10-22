@@ -22,9 +22,7 @@ const Sec1 = () => {
           </Sec1_SubText>
         </Sec1_Container>
         <Sec1_Container>
-          <Sec1_img
-            marginleft={"11.5px"}
-            width={isMobile ? "106px" : "167px"}
+          <Sec1_img_ml
             src="/assets/image/sec1/sec1_img2.png"
             alt="Korean actor casting platform Plfil"
           />
@@ -121,7 +119,16 @@ const Sec1_Container = styled.div`
 
 const Sec1_img = styled.img`
   width: ${(props) => props.width};
-  margin-left: ${(props) => props.marginleft || "0px"};
+  margin-left: 0;
+`;
+
+const Sec1_img_ml = styled.img`
+  width: 167px;
+  margin-left: 11.5px;
+
+  @media (max-width: 768px) {
+    width: 106px;
+  }
 `;
 
 const Sec1_SubText = styled.p`
