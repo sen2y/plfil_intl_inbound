@@ -1,5 +1,5 @@
-import styled from "styled-components";
+// import styled from "styled-components";
 
-const Sec3Image = styled.img``;
+// const Sec3Image = styled.img``;
 
-export default Sec3Image;
+// export default Sec3Image;

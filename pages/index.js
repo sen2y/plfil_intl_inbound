@@ -4,6 +4,7 @@ import Sec1 from "../components/templates/Sec1";
 import Sec2 from "../components/templates/Sec2";
 import Sec3 from "../components/templates/Sec3";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import Sec4 from "@/components/templates/Sec4";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         <Sec1 />
         <Sec2 />
         <Sec3 />
+        <Sec4 />
       </Wrapper>
     </>
   );

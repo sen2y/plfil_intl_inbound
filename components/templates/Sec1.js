@@ -7,11 +7,14 @@ const Sec1 = () => {
 
   return (
     <Wrapper>
-      <Sec1_Title>한국 배우가 필요하시다면 빠르게 찾아드립니다</Sec1_Title>
+      <Sec1_Title>
+        한국 배우가 필요하시다면
+        <br />
+        빠르게 찾아드립니다
+      </Sec1_Title>
 
       <Container_Wrapper>
         <Sec1_Container>
-          {/* 이 부분 글자랑 이미지 간격이 잘 안맞아서 임의로 마진값 설정함. */}
           <Sec1_img
             width={isMobile ? "92px" : "138px"}
             src="/assets/image/sec1/sec1_img1.png"
@@ -47,7 +50,7 @@ const Sec1 = () => {
 };
 
 const Wrapper = styled.div`
-  width: 1440px;
+  width: 1048px;
   height: 632px;
   /* position: relative; 부모 컨테이너를 상대 위치로 설정 */
 
@@ -61,11 +64,7 @@ const Wrapper = styled.div`
   }
 `;
 const Sec1_Title = styled.div`
-  position: absolute;
-  width: 399px;
-  height: 96px;
-  top: 621px;
-  margin-left: 240px;
+  margin: 120px 0 0 60px;
   font-weight: 700;
   font-size: 40px;
   line-height: 47.73px;
@@ -89,10 +88,9 @@ const Container_Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1440px;
+  width: 1080px;
   height: 300px;
-  position: relative; /* 부모 컨테이너를 상대 위치로 설정 */
-  top: 253px;
+  margin-top: 35px;
 
   @media (max-width: 768px) {
     flex-direction: column;

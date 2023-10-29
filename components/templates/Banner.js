@@ -3,72 +3,70 @@ import styled from "styled-components";
 import useIsMobile from "../../libs/useIsMobile";
 
 const Banner = () => {
-  const isMobile = useIsMobile();
+  // const isMobile = useIsMobile();
+  // console.log("isMobile:", isMobile); // Add this line
 
   return (
     <Wrapper>
-      <Banner_Header>
+      <Header>
         <Logo>PLFIL</Logo>
         <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
-      </Banner_Header>
-      <Banner_Img
-        src={
-          isMobile
-            ? "/assets/image/banner/global_banner_mo.png"
-            : "/assets/image/banner/global_banner.png"
-        }
-        alt="banner"
-      />
-
-      <Banner_Text>배우를 찾고 계신가요?</Banner_Text>
-      <Banner_SubText>
-        플필에서 빠르게 캐스팅을 도와드리겠습니다.
-      </Banner_SubText>
-
-      <ContactBtn>캐스팅 문의</ContactBtn>
+      </Header>
+      <Content>
+        <Banner_Text>
+          <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
+          <Banner_SubTitle>
+            플필에서 빠르게 캐스팅을 도와드리겠습니다.
+          </Banner_SubTitle>
+        </Banner_Text>
+        <Banner_Btn>
+          <ContactBtn>캐스팅 문의</ContactBtn>
+        </Banner_Btn>
+      </Content>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
-  width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   height: 500px;
-  position: relative; /* 부모 컨테이너를 상대 위치로 설정 */
+  position: relative;
+  background: url("/assets/image/banner/global_banner.png") no-repeat;
+  background-size: 100%;
 
-  // mobile 버전
   @media (max-width: 768px) {
     width: 100%;
     height: 100%;
+    background: url("/assets/image/banner/global_banner_mo.png") no-repeat;
+    background-size: 100%;
   }
 `;
 
-const Banner_Header = styled.div`
+const Header = styled.div`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  top: 14px;
-  width: 1440px;
+  width: 1080px;
   height: 80px;
-  border: 1px;
-  position: absolute;
-  color: white;
+  background-color: transparent;
+`;
 
-  /* mobile 버전 */
-  @media (max-width: 768px) {
-    margin: 12px 0px 0px 0px;
-    height: 35px;
-    top: 0;
-    justify-content: space-between;
-    width: 100%;
-  }
+const Content = styled.div`
+  width: 1080px;
+  height: 386px;
+  background-color: transparent;
+  /* background-color: blue; */
 `;
 
 const Logo = styled.p`
-  margin-left: 196px;
   font-family: "Majoris Italic";
   font-size: 40px;
   font-weight: 400;
   line-height: 50.47px;
-  align-items: center;
+  /* align-items: center; */
   color: transparent;
   background-image: linear-gradient(93.27deg, #ff1744 0%, #ff4512 100%);
   background-clip: text; //텍스트만 그라데이션을 보이도록 클리핑
@@ -108,22 +106,25 @@ const HeaderBtn2 = styled.button`
   }
 `;
 
-const Banner_Img = styled.img`
-  width: 1440px;
-
-  /* mobile 버전 */
-  @media (max-width: 768px) {
-    width: 100%;
-  }
+const Banner_Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 1080px;
+  height: auto;
+  margin: 80px 0px 0px 60px;
 `;
 
-const Banner_Text = styled.h3`
+const Banner_Btn = styled.div`
+  display: flex;
+  width: 1080px;
+  height: auto;
+  margin: 92px 0 0 60px;
+`;
+
+const Banner_Title = styled.h3`
   font-size: 60px;
   font-weight: 800;
   line-height: 71.6px;
-  position: absolute;
-  top: 160px;
-  left: 240px;
   color: white;
 
   /* mobile 버전 */
@@ -137,13 +138,10 @@ const Banner_Text = styled.h3`
   }
 `;
 
-const Banner_SubText = styled.h2`
+const Banner_SubTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
   line-height: 35.8px;
-  position: absolute;
-  top: 244px;
-  left: 240px;
   color: white;
 
   /* mobile 버전 */
@@ -160,8 +158,7 @@ const Banner_SubText = styled.h2`
 const ContactBtn = styled.button`
   width: 172px;
   height: 48px;
-  top: 372px;
-  left: 240px;
+
   border-radius: 2px;
   border: none;
   padding: 12px 40px;
@@ -172,7 +169,6 @@ const ContactBtn = styled.button`
   font-size: 20px;
   font-weight: 700;
   line-height: 23.87px;
-  position: absolute;
 
   /* mobile 버전 */
   @media (max-width: 768px) {

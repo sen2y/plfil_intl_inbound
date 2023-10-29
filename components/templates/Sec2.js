@@ -52,7 +52,7 @@ const Sec2 = () => {
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 1440px;
+  width: 1080px;
   height: 640px;
 
   @media (max-width: 768px) {

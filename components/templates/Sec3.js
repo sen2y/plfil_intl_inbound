@@ -8,14 +8,14 @@ const Sec3 = () => {
   return (
     <Wrapper>
       <Sec3_Container>
-        <Sec3_img
+        {/* <Sec3_img
           src={
             isMobile
               ? "/assets/image/sec3/sec3_img1_mo.png"
               : "/assets/image/sec3/sec3_img1.png"
           }
           alt="Korean actor casting platform Plfil"
-        ></Sec3_img>
+        ></Sec3_img> */}
         {isMobile ? (
           <Sec3_InnerText>
             플필에는
@@ -59,13 +59,6 @@ const Sec3 = () => {
           />
         </Sec3_MoImgContainer>
       ) : null}
-
-      <Sec3_Text>
-        플필을 통해
-        <br />
-        원하시는 배우들을 캐스팅 해보세요!
-      </Sec3_Text>
-      <Sec3_Btn>캐스팅 문의</Sec3_Btn>
     </Wrapper>
   );
 };
@@ -74,7 +67,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 1440px;
-  height: 1312px;
+  height: auto;
 
   // mobile 버전
   @media (max-width: 768px) {
@@ -88,10 +81,11 @@ const Wrapper = styled.div`
 `;
 
 const Sec3_Container = styled.div`
-  position: absolute;
-  top: 1933px;
+  /* position: absolute; */
+  margin-top: 160px;
   width: 1080px;
   height: 428px;
+  background: url("/assets/image/sec3/sec3_img1.png") no-repeat;
 
   // mobile 버전
   @media (max-width: 768px) {
@@ -138,16 +132,14 @@ const Sec3_MoImg = styled.img`
 `;
 
 const Sec3_InnerText = styled.h2`
-  position: absolute;
   width: 502px;
   height: 96px;
-  top: 80px;
-  left: 518px;
   font-weight: 700;
   font-size: 40px;
   line-height: 47.73px;
   text-align: right;
   color: white;
+  margin: 80px 60px 188px 518px;
 
   // mobile 버전
   @media (max-width: 768px) {
