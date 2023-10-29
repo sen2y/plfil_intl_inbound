@@ -21,17 +21,18 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 1080px;
+  width: 100%;
   height: auto;
+  padding: 260px 204px 240px;
 
   // mobile 버전
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
     width: 100%;
     height: 100%;
-    margin-bottom: 200px;
+    padding: 140px 0;
   }
 `;
 
@@ -44,13 +45,11 @@ const Sec4_Text = styled.div`
   line-height: 57.28px;
   font-style: normal;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
-  margin: 260px 0 52px 0;
+  margin-bottom: 52px;
 
   // mobile 버전
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     position: relative;
-    top: 0px;
-    margin-top: 140px;
     width: 257px;
     height: 129px;
     font-size: 36px;
@@ -63,7 +62,6 @@ const Sec4_Btn = styled.button`
   width: 280px;
   height: 57px;
   gap: 10px;
-  margin-bottom: 240px;
   padding: 12px 40px;
   border-radius: 2px;
   background: transparent;
@@ -77,11 +75,8 @@ const Sec4_Btn = styled.button`
   text-align: center;
 
   // mobile 버전
-  @media (max-width: 768px) {
-    position: relative;
-    top: 0px;
-    margin-top: 40px;
-    width: 342px;
+  @media (max-width: 1080px) {
+    width: 100%;
     text-align: center;
   }
 `;

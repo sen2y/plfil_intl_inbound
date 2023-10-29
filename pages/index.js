@@ -5,10 +5,11 @@ import Sec2 from "../components/templates/Sec2";
 import Sec3 from "../components/templates/Sec3";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Sec4 from "@/components/templates/Sec4";
+import Footer from "@/components/templates/Footer";
 
 export default function Home() {
   return (
-    <>
+    <Wrapper>
       <HelmetProvider>
         <Helmet>
           <title></title>
@@ -26,24 +27,36 @@ export default function Home() {
           />
         </Helmet>
       </HelmetProvider>
-      <Wrapper>
-        <Banner />
+      <Banner />
+      <Inner>
         <Sec1 />
         <Sec2 />
         <Sec3 />
         <Sec4 />
-      </Wrapper>
-    </>
+      </Inner>
+      <Footer />
+    </Wrapper>
   );
 }
 
 // 페이지 제목 설정
 Home.title = "플필 - 한국 배우 캐스팅 서비스"; // Home 페이지의 타이틀 설정
-
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+`;
+
+const Inner = styled.div`
+  width: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
+
+  @media (max-width: 1080px) {
+    width: 100%;
+    padding: 0 16px;
+  }
 `;

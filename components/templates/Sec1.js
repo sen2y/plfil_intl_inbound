@@ -16,7 +16,7 @@ const Sec1 = () => {
       <Container_Wrapper>
         <Sec1_Container>
           <Sec1_img
-            width={isMobile ? "92px" : "138px"}
+            width={isMobile ? "92px" : "auto"}
             src="/assets/image/sec1/sec1_img1.png"
             alt="Korean actor casting platform Plfil"
           />
@@ -50,53 +50,47 @@ const Sec1 = () => {
 };
 
 const Wrapper = styled.div`
-  width: 1048px;
+  width: 100%;
   height: 632px;
-  /* position: relative; 부모 컨테이너를 상대 위치로 설정 */
+  padding: 120px 45px 80px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     display: flex;
+    height: auto;
     flex-direction: column;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-bottom: 150px; // Wrapper가 컴포넌트 끝까지 차지 못해서 임의로 설정함.
+    padding: 60px 0 100px;
   }
 `;
 const Sec1_Title = styled.div`
-  margin: 120px 0 0 60px;
+  margin-bottom: 35px;
   font-weight: 700;
   font-size: 40px;
   line-height: 47.73px;
   color: black;
 
-  @media (max-width: 768px) {
-    position: relative;
+  @media (max-width: 1080px) {
     width: 280px;
     height: 66px;
-    margin-left: 0px;
-    top: 61px;
     font-weight: 700;
     font-size: 28px;
     line-height: 33.41px;
     text-align: center;
+    margin-bottom: 20px;
   }
 `;
 
 const Container_Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: 1080px;
-  height: 300px;
-  margin-top: 35px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    top: 86px;
   }
 `;
 
@@ -108,15 +102,22 @@ const Sec1_Container = styled.div`
   width: 314px;
   height: 300px;
   margin-right: 24px;
+  &:last-child {
+    margin-right: 0;
+  }
 
-  @media (max-width: 768px) {
-    margin: 0px 0px 20px 0px;
+  @media (max-width: 1080px) {
+    margin: 0px 0px 14px 0px;
     height: 174px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `;
 
 const Sec1_img = styled.img`
-  width: ${(props) => props.width};
+  /* width: ${(props) => props.width}; */
   margin-left: 0;
 `;
 
@@ -124,7 +125,7 @@ const Sec1_img_ml = styled.img`
   width: 167px;
   margin-left: 11.5px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     width: 106px;
   }
 `;
@@ -138,7 +139,7 @@ const Sec1_SubText = styled.p`
   line-height: 28.64px;
   text-align: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     top: 200px;
     height: 38px;
     font-size: 16px;

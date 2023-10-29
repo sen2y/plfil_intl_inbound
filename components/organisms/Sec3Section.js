@@ -34,7 +34,7 @@
 //   width: 1080px;
 //   height: 428px;
 
-//   @media (max-width: 768px) {
+//   @media (max-width: 10808px) {
 //     position: relative;
 //     margin-top: 100px;
 //     top: 0px;
@@ -53,7 +53,7 @@
 //   font-style: normal;
 //   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
 
-//   @media (max-width: 768px) {
+//   @media (max-width: 10808px) {
 //     position: relative;
 //     top: 0px;
 //     margin-top: 140px;
@@ -81,7 +81,7 @@
 //   line-height: 33.41px;
 //   text-align: center;
 
-//   @media (max-width: 768px) {
+//   @media (max-width: 10808px) {
 //     position: relative;
 //     top: 0px;
 //     margin-top: 40px;

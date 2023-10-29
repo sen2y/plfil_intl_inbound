@@ -6,7 +6,7 @@ function useIsMobile() {
 
   useEffect(() => {
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobile(window.innerWidth <= 1080);
     };
 
     checkIsMobile(); // 초기 로드 시 체크

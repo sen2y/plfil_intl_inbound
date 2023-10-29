@@ -8,21 +8,24 @@ const Banner = () => {
 
   return (
     <Wrapper>
-      <Header>
-        <Logo>PLFIL</Logo>
-        <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
-      </Header>
-      <Content>
-        <Banner_Text>
-          <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
-          <Banner_SubTitle>
-            플필에서 빠르게 캐스팅을 도와드리겠습니다.
-          </Banner_SubTitle>
-        </Banner_Text>
-        <Banner_Btn>
-          <ContactBtn>캐스팅 문의</ContactBtn>
-        </Banner_Btn>
-      </Content>
+      <Inner>
+        <Header>
+          <Logo>PLFIL</Logo>
+          <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
+        </Header>
+        <Content>
+          <Banner_Text>
+            <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
+            <Banner_SubTitle>
+              플필에서 빠르게 캐스팅을 도와드리겠습니다.
+            </Banner_SubTitle>
+          </Banner_Text>
+
+          <Banner_Btn>
+            <ContactBtn>캐스팅 문의</ContactBtn>
+          </Banner_Btn>
+        </Content>
+      </Inner>
     </Wrapper>
   );
 };
@@ -33,15 +36,28 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 500px;
-  position: relative;
   background: url("/assets/image/banner/global_banner.png") no-repeat;
-  background-size: 100%;
+  background-size: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     width: 100%;
-    height: 100%;
+    height: 261px;
     background: url("/assets/image/banner/global_banner_mo.png") no-repeat;
-    background-size: 100%;
+    background-size: cover;
+    background-color: pink;
+  }
+`;
+
+const Inner = styled.div`
+  width: 1080px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1080px) {
+    width: 100%;
   }
 `;
 
@@ -49,107 +65,122 @@ const Header = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 1080px;
+  width: 100%;
   height: 80px;
-  background-color: transparent;
+
+  @media (max-width: 1080px) {
+    height: 100%;
+    padding: 12px 24px 0 28px;
+    height: auto;
+  }
 `;
 
 const Content = styled.div`
-  width: 1080px;
+  width: 100%;
   height: 386px;
   background-color: transparent;
   /* background-color: blue; */
+  padding: 80px 60px 80px;
+
+  @media (max-width: 1080px) {
+    height: 100%;
+    padding: 45px 68px 26px 28px;
+  }
 `;
 
 const Logo = styled.p`
   font-family: "Majoris Italic";
   font-size: 40px;
   font-weight: 400;
-  line-height: 50.47px;
-  /* align-items: center; */
+  width: 121px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 16px;
   color: transparent;
   background-image: linear-gradient(93.27deg, #ff1744 0%, #ff4512 100%);
   background-clip: text; //텍스트만 그라데이션을 보이도록 클리핑
   -webkit-background-clip: text; /* 웹킷 브라우저 지원을 위해 추가*/
 
   /* mobile 버전 */
-  @media (max-width: 768px) {
-    margin-left: 28px;
+  @media (max-width: 1080px) {
+    width: 85px;
+    height: 35px;
+    margin: 0;
     font-size: 28px;
-    line-height: 35.33px;
   }
 `;
 
 const HeaderBtn2 = styled.button`
-  margin-left: 772px;
   width: 159px;
   height: 38px;
   background: transparent;
   border: 1px solid #ff1744;
   border-radius: 2px;
-  gap: 10px;
   color: white;
   cursor: pointer;
   font-weight: 700;
   font-size: 14px;
-  line-height: 22px;
-  text-align: center;
+  margin: 0px 12px;
 
   /* mobile 버전 */
-  @media (max-width: 768px) {
-    margin: 2px 28px 0px 0px;
+  @media (max-width: 1080px) {
     width: 133px;
     height: 30px;
     font-size: 12px;
     line-height: 22px;
     font-weight: 700;
+    margin: 0;
   }
 `;
 
 const Banner_Text = styled.div`
   display: flex;
   flex-direction: column;
-  width: 1080px;
   height: auto;
-  margin: 80px 0px 0px 60px;
+
+  /* mobile 버전 */
+  @media (max-width: 1080px) {
+    width: 100%;
+  }
 `;
 
 const Banner_Btn = styled.div`
   display: flex;
-  width: 1080px;
   height: auto;
-  margin: 92px 0 0 60px;
+  margin: 92px 0 0 0px;
+
+  @media (max-width: 1080px) {
+    margin: 0;
+    width: 100%;
+    margin-top: 48px;
+  }
 `;
 
 const Banner_Title = styled.h3`
   font-size: 60px;
   font-weight: 800;
-  line-height: 71.6px;
   color: white;
+  margin-bottom: 12px;
 
   /* mobile 버전 */
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     font-size: 28px;
-    line-height: 33.41px;
-    top: 92px;
-    left: 28px;
     width: 246px;
     height: 33px;
+    margin-bottom: 8px;
   }
 `;
 
 const Banner_SubTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
-  line-height: 35.8px;
   color: white;
 
   /* mobile 버전 */
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     font-size: 16px;
-    line-height: 19.09px;
-    top: 133px;
-    left: 28px;
     width: 279px;
     height: 28px;
   }
@@ -171,7 +202,7 @@ const ContactBtn = styled.button`
   line-height: 23.87px;
 
   /* mobile 버전 */
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     width: 129px;
     height: 35px;
     top: 200px;

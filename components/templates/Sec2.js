@@ -9,7 +9,7 @@ const Sec2 = () => {
     <Wrapper>
       <Sec2_Container>
         <Sec2_img
-          width={isMobile ? "343px" : "483px"}
+          width={isMobile ? "100%" : "auto"}
           src="/assets/image/sec2/sec2_img1.png"
           alt="Korean actor casting platform Plfil"
         />
@@ -52,23 +52,25 @@ const Sec2 = () => {
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
-  width: 1080px;
+  width: 100%;
   height: 640px;
+  padding: 160px 60px 80px 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     width: 100%;
     height: 100%;
+    padding: 0 0 100px;
   }
 `;
 
 const Sec2_Container = styled.div`
   display: flex;
   flex-direction: row;
-  width: 1080px;
+  justify-content: space-between;
+  width: 100%;
   height: 400px;
-  margin-top: 160px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -78,7 +80,7 @@ const Sec2_Container = styled.div`
 `;
 
 const Img_Wrapper = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -94,18 +96,18 @@ const Sec2_img = styled.img`
 const Sec2_InnerContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 597px;
+  align-items: flex-end;
   height: 400px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     margin-top: 40px;
     width: 255px;
     height: 325px;
+    align-items: center;
   }
 `;
 
 const Sec2_InnerText = styled.h3`
-  margin-left: 48px;
   width: 489px;
   height: 96px;
   font-weight: 700;
@@ -113,9 +115,9 @@ const Sec2_InnerText = styled.h3`
   line-height: 47.73px;
   text-align: right;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1080px) {
     margin-left: 0px;
-    width: 255px;
+    width: 184px;
     height: 99px;
     font-size: 28px;
     line-height: 33.41px;
@@ -128,8 +130,8 @@ const Sec2_InnerImg = styled.img`
   height: 101px;
   margin: 80px 0px 0px 437px;
 
-  @media (max-width: 768px) {
-    margin: 40px 0px 0px 0px;
+  @media (max-width: 1080px) {
+    margin: 40px 0px 28px 0px;
   }
 `;
 
@@ -142,8 +144,8 @@ const Sec2_InnerSubText = styled.p`
   line-height: 28.64px;
   text-align: right;
 
-  @media (max-width: 768px) {
-    margin-left: 0px;
+  @media (max-width: 1080px) {
+    margin: 0;
     width: 255px;
     height: 57px;
     font-size: 16px;
