@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import useIsMobile from "../../libs/useIsMobile";
 
 const Sec1 = () => {
-  const isMobile = useIsMobile();
-
   return (
     <Wrapper>
       <Sec1_Title>
@@ -16,30 +13,32 @@ const Sec1 = () => {
       <Container_Wrapper>
         <Sec1_Container>
           <Sec1_img
-            width={isMobile ? "92px" : "auto"}
             src="/assets/image/sec1/sec1_img1.png"
             alt="Korean actor casting platform Plfil"
           />
-          <Sec1_SubText width={isMobile ? "119px" : "178px"}>
-            영어 / 일어 가능한 배우 리스트 보유중
-          </Sec1_SubText>
-        </Sec1_Container>
-        <Sec1_Container>
-          <Sec1_img_ml
-            src="/assets/image/sec1/sec1_img2.png"
-            alt="Korean actor casting platform Plfil"
-          />
-          <Sec1_SubText width={isMobile ? "119px" : "178px"}>
-            오디션 공간 대여, 스케쥴링 문의 가능
+          <Sec1_SubText>
+            영어 / 일어 가능한
+            <br />
+            배우 리스트 보유중
           </Sec1_SubText>
         </Sec1_Container>
         <Sec1_Container>
           <Sec1_img
-            width={isMobile ? "82px" : "123px"}
+            src="/assets/image/sec1/sec1_img2.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec1_SubText>
+            오디션 공간 대여,
+            <br />
+            스케쥴링 문의 가능
+          </Sec1_SubText>
+        </Sec1_Container>
+        <Sec1_Container>
+          <Sec1_img
             src="/assets/image/sec1/sec1_img3.png"
             alt="Korean actor casting platform Plfil"
           />
-          <Sec1_SubText width={isMobile ? "92px" : "138px"}>
+          <Sec1_SubText>
             캐스팅 피<br />
             출연료의 10%
           </Sec1_SubText>
@@ -117,23 +116,19 @@ const Sec1_Container = styled.div`
 `;
 
 const Sec1_img = styled.img`
-  /* width: ${(props) => props.width}; */
-  margin-left: 0;
-`;
-
-const Sec1_img_ml = styled.img`
-  width: 167px;
-  margin-left: 11.5px;
+  width: 210px;
+  height: 168px;
 
   @media (max-width: 1080px) {
-    width: 106px;
+    width: 140px;
+    height: 106px;
   }
 `;
 
 const Sec1_SubText = styled.p`
-  width: ${(props) => props.width};
+  width: auto;
   height: 58px;
-  margin-top: 25px;
+  margin-top: 5px;
   font-weight: 600;
   font-size: 24px;
   line-height: 28.64px;

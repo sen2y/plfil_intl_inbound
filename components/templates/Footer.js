@@ -1,67 +1,46 @@
 import React from "react";
 import styled from "styled-components";
-import useIsMobile from "../../libs/useIsMobile";
+import Link from "next/link";
 
 const Footer = () => {
-  const isMobile = useIsMobile();
-
   return (
     <Wrapper>
       <Inner>
-        {isMobile ? (
-          <>
-            <Sec2>
-              <SNS_Btn src="/assets/image/footer/insta.png"></SNS_Btn>
-              <SNS_Btn src="/assets/image/footer/kakao.png"></SNS_Btn>
-              <SNS_Btn src="/assets/image/footer/plus.png"></SNS_Btn>
-              <SNS_Btn src="/assets/image/footer/blog.png"></SNS_Btn>
-            </Sec2>
+        <>
+          <Sec1>
+            <Logo src="/assets/image/footer/logo.png" />
             <TextSec>
-              <Text_Btn>개인정보처리방침 및 이용약관</Text_Btn>
               <Text_Btn>서비스 소개</Text_Btn>
+              <Text_Btn>개인정보처리방침 및 이용약관</Text_Btn>
             </TextSec>
-            <Sec3>
-              <Text>
-                (주)플필 | 대표자 : 류민국 | 사업자등록번호 : 430-87-02549
-              </Text>
-              <Text>통신판매업 신고번호 : 2022-서울강남-03908</Text>
-              <Text>
-                사업장 소재지 : 서울특별시 서초구 잠원동 18-18 신사빌딩 2층
-              </Text>
-              <Text>광고 및 제휴문의 : contact@plfil.com</Text>
-              <Text>인재채용 및 사이트관련문의 : support@plfil.com</Text>
-              <Text>© Plfil, Inc.</Text>
-            </Sec3>
-          </>
-        ) : (
-          <>
-            <Sec1>
-              <Logo src="/assets/image/footer/logo.png" />
-              <TextSec>
-                <Text_Btn>서비스 소개</Text_Btn>
-                <Text_Btn>개인정보처리방침 및 이용약관</Text_Btn>
-              </TextSec>
-            </Sec1>
-            <Sec2>
+          </Sec1>
+          <Sec2>
+            <Link href="https://www.instagram.com/plfil_official/" passHref>
               <SNS_Btn src="/assets/image/footer/insta.png"></SNS_Btn>
+            </Link>
+            <Link href="https://pf.kakao.com/_yYxiAxj" passHref>
               <SNS_Btn src="/assets/image/footer/kakao.png"></SNS_Btn>
+            </Link>
+            <Link href="https://pf.kakao.com/_GxaxcLxj" passHref>
               <SNS_Btn src="/assets/image/footer/plus.png"></SNS_Btn>
+            </Link>
+            <Link href="https://blog.naver.com/plfil" passHref>
               <SNS_Btn src="/assets/image/footer/blog.png"></SNS_Btn>
-            </Sec2>
-            <Sec3>
-              <Text>
-                (주)플필 | 대표자 : 류민국 | 사업자등록번호 : 430-87-02549 |
-                통신판매업 신고번호 : 2022-서울강남-03908
-              </Text>
-              <Text>
-                사업장 소재지 : 서울특별시 서초구 잠원동 18-18 신사빌딩 2층
-              </Text>
-              <Text>광고 및 제휴문의 : contact@plfil.com</Text>
-              <Text>인재채용 및 사이트관련문의 : support@plfil.com</Text>
-              <Text>© Plfil, Inc.</Text>
-            </Sec3>
-          </>
-        )}
+            </Link>
+          </Sec2>
+          <Sec3>
+            <Text>
+              (주)플필 | 대표자 : 류민국 | 사업자등록번호 : 430-87-02549 |
+              통신판매업 신고번호 : 2022-서울강남-03908
+            </Text>
+            <Text>
+              사업장 소재지 : 서울특별시 서초구 잠원동 18-18 신사빌딩 2층
+            </Text>
+            <Text>광고 및 제휴문의 : contact@plfil.com</Text>
+            <Text>인재채용 및 사이트관련문의 : support@plfil.com</Text>
+            <Text>© Plfil, Inc.</Text>
+          </Sec3>
+        </>
       </Inner>
     </Wrapper>
   );

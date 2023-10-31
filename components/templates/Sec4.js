@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import useIsMobile from "../../libs/useIsMobile";
 
 const Sec4 = () => {
-  const isMobile = useIsMobile();
-
   return (
     <Wrapper>
       <Sec4_Text>

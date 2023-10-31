@@ -1,32 +1,32 @@
 import React from "react";
 import styled from "styled-components";
-import useIsMobile from "../../libs/useIsMobile";
 
 const Banner = () => {
-  // const isMobile = useIsMobile();
-  // console.log("isMobile:", isMobile); // Add this line
-
   return (
-    <Wrapper>
-      <Inner>
-        <Header>
-          <Logo>PLFIL</Logo>
-          <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
-        </Header>
-        <Content>
-          <Banner_Text>
-            <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
-            <Banner_SubTitle>
-              플필에서 빠르게 캐스팅을 도와드리겠습니다.
-            </Banner_SubTitle>
-          </Banner_Text>
+    <>
+      <Wrapper>
+        <WrapperBack>
+          <Inner>
+            <Header>
+              <Logo>PLFIL</Logo>
+              <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
+            </Header>
+            <Content>
+              <Banner_Text>
+                <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
+                <Banner_SubTitle>
+                  플필에서 빠르게 캐스팅을 도와드리겠습니다.
+                </Banner_SubTitle>
+              </Banner_Text>
 
-          <Banner_Btn>
-            <ContactBtn>캐스팅 문의</ContactBtn>
-          </Banner_Btn>
-        </Content>
-      </Inner>
-    </Wrapper>
+              <Banner_Btn>
+                <ContactBtn>캐스팅 문의</ContactBtn>
+              </Banner_Btn>
+            </Content>
+          </Inner>
+        </WrapperBack>
+      </Wrapper>
+    </>
   );
 };
 
@@ -38,13 +38,28 @@ const Wrapper = styled.div`
   height: 500px;
   background: url("/assets/image/banner/global_banner.png") no-repeat;
   background-size: cover;
+  background-position: 90% center;
+  z-index: 1;
 
   @media (max-width: 1080px) {
     width: 100%;
     height: 261px;
-    background: url("/assets/image/banner/global_banner_mo.png") no-repeat;
-    background-size: cover;
     background-color: pink;
+    background-position: 45% 55%;
+    background-size: 250%;
+  }
+`;
+
+const WrapperBack = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 466px;
+  z-index: 2;
+  background: linear-gradient(180deg, #000 -4.29%, rgba(0, 0, 0, 0) 100%);
+
+  @media (max-width: 1080px) {
+    height: 244px;
   }
 `;
 
@@ -55,7 +70,7 @@ const Inner = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+  z-index: 3;
   @media (max-width: 1080px) {
     width: 100%;
   }

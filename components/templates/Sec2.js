@@ -1,34 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import useIsMobile from "../../libs/useIsMobile";
 
 const Sec2 = () => {
-  const isMobile = useIsMobile();
-
   return (
     <Wrapper>
       <Sec2_Container>
         <Sec2_img
-          width={isMobile ? "100%" : "auto"}
           src="/assets/image/sec2/sec2_img1.png"
           alt="Korean actor casting platform Plfil"
         />
         <Sec2_InnerContainer>
-          {isMobile ? (
-            <Sec2_InnerText>
-              배우 뿐만 아니라
-              <br />
-              촬영 스태프도
-              <br />
-              구인 가능합니다.
-            </Sec2_InnerText>
-          ) : (
-            <Sec2_InnerText>
-              배우 뿐만 아니라
-              <br />
-              촬영 스태프도 구인 가능합니다.
-            </Sec2_InnerText>
-          )}
+          <Sec2_InnerText>
+            배우 뿐만 아니라
+            <br />
+            촬영 스태프도 구인 가능합니다.
+          </Sec2_InnerText>
+
           <Img_Wrapper>
             <Sec2_InnerImg
               src="/assets/image/sec2/sec2_img2.png"
@@ -90,7 +77,7 @@ const Img_Wrapper = styled.div`
 `;
 
 const Sec2_img = styled.img`
-  width: ${(props) => props.width};
+  width: 100%;
 `;
 
 const Sec2_InnerContainer = styled.div`
