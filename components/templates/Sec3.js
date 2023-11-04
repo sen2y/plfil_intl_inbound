@@ -1,24 +1,24 @@
 import React from "react";
 import styled from "styled-components";
-// import useIsMobile from "../../libs/useIsMobile";
+import useIsMobile from "../../libs/useMobile";
 
 const Sec3 = () => {
-  // const isMobile = useIsMobile();
+  const isMobile = useIsMobile();
 
   return (
     <Wrapper>
       <Sec3_Container>
         <Sec3_InnerText>
           플필에는
-          {/* {isMobile ? <br /> : " "} */}
+          {isMobile ? <br /> : " "}
           약 2만여명의 배우들이
           <br />
           캐스팅을 기다리고 있습니다.
         </Sec3_InnerText>
 
         <Sec3_img>
-          {/* {isMobile ? ( */}
-          {/* <MoDiv>
+          {isMobile ? (
+            <MoDiv>
               <InnerImg_big
                 src="/assets/image/sec3/sec3_img_big.png"
                 alt="Korean actor casting platform Plfil"
@@ -54,44 +54,44 @@ const Sec3 = () => {
                   alt="Korean actor casting platform Plfil"
                 />
               </MoDiv2>
-            </MoDiv> */}
-          {/* ) : ( */}
-          <>
-            <InnerImg_big
-              src="/assets/image/sec3/sec3_img_big.png"
-              alt="Korean actor casting platform Plfil"
-            />
-            <InnerImg_small
-              src="/assets/image/sec3/sec3_sub1.png"
-              alt="Korean actor casting platform Plfil"
-            />
+            </MoDiv>
+          ) : (
+            <>
+              <InnerImg_big
+                src="/assets/image/sec3/sec3_img_big.png"
+                alt="Korean actor casting platform Plfil"
+              />
+              <InnerImg_small
+                src="/assets/image/sec3/sec3_sub1.png"
+                alt="Korean actor casting platform Plfil"
+              />
 
-            <InnerImg_small
-              src="/assets/image/sec3/sec3_sub2.png"
-              alt="Korean actor casting platform Plfil"
-            />
+              <InnerImg_small
+                src="/assets/image/sec3/sec3_sub2.png"
+                alt="Korean actor casting platform Plfil"
+              />
 
-            <InnerImg_small
-              src="/assets/image/sec3/sec3_sub3.png"
-              alt="Korean actor casting platform Plfil"
-            />
+              <InnerImg_small
+                src="/assets/image/sec3/sec3_sub3.png"
+                alt="Korean actor casting platform Plfil"
+              />
 
-            <InnerImg_small
-              src="/assets/image/sec3/sec3_sub4.png"
-              alt="Korean actor casting platform Plfil"
-            />
+              <InnerImg_small
+                src="/assets/image/sec3/sec3_sub4.png"
+                alt="Korean actor casting platform Plfil"
+              />
 
-            <InnerImg_small
-              src="/assets/image/sec3/sec3_sub5.png"
-              alt="Korean actor casting platform Plfil"
-            />
+              <InnerImg_small
+                src="/assets/image/sec3/sec3_sub5.png"
+                alt="Korean actor casting platform Plfil"
+              />
 
-            <InnerImg_small
-              src="/assets/image/sec3/sec3_sub6.png"
-              alt="Korean actor casting platform Plfil"
-            />
-          </>
-          {/* )} */}
+              <InnerImg_small
+                src="/assets/image/sec3/sec3_sub6.png"
+                alt="Korean actor casting platform Plfil"
+              />
+            </>
+          )}
         </Sec3_img>
       </Sec3_Container>
     </Wrapper>
