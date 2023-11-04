@@ -5,21 +5,26 @@ import useIsMobile from "../../libs/useMobile";
 const Sec3 = () => {
   const isMobile = useIsMobile();
   const innerText_pc =
-    "플필에는 약 2만여명의 배우들이 <br />캐스팅을 기다리고 있습니다.";
+    "PLFIL has a directory of over 20,000 actors<br/>awaiting for your casting call..";
+
   const innerText_mo =
-    "플필에는<br />약 2만여명의 배우들이<br />캐스팅을 기다리고 있습니다.";
+    "PLFIL has a directory of<br/>over 20,000 actors<br/>awaiting for your casting call..";
 
   return (
     <Wrapper>
       <Div>
         <Sec3_Container>
-          <Sec3_InnerText>
-            플필에는
+          <Sec3_InnerText_mo
+            dangerouslySetInnerHTML={{ __html: innerText_mo }}
+          ></Sec3_InnerText_mo>
+          <Sec3_InnerText
+            dangerouslySetInnerHTML={{ __html: innerText_pc }}
+          ></Sec3_InnerText>
+          {/* 플필에는
             {isMobile ? <br /> : " "}
             약 2만여명의 배우들이
             <br />
-            캐스팅을 기다리고 있습니다.
-          </Sec3_InnerText>
+            캐스팅을 기다리고 있습니다. */}
 
           <Sec3_img>
             {isMobile ? (
@@ -239,22 +244,37 @@ const InnerImg_small = styled.img`
 const Sec3_InnerText = styled.h2`
   display: flex;
   align-items: flex-end;
-  width: 502px;
-  height: 96px;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 47.73px;
+  width: auto;
+  height: auto;
+  color: #fff;
   text-align: right;
-  color: white;
-  /* padding: 80px 60px 0 88px; */
+  font-family: Pretendard;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 
   // mobile 버전
   @media (max-width: 1080px) {
-    width: 312px;
-    height: 99px;
-    font-size: 28px;
-    line-height: 33.41px;
+    display: none;
+  }
+`;
+
+const Sec3_InnerText_mo = styled.h2`
+  display: none;
+  // mobile 버전
+  @media (max-width: 1080px) {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    width: auto;
+    height: auto;
+    line-height: normal;
     text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
   }
 `;
 

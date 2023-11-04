@@ -12,14 +12,16 @@ const Banner = () => {
           </Header>
           <Content>
             <Banner_Text>
-              <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
+              <Banner_Title>Looking for a qualified actor?</Banner_Title>
               <Banner_SubTitle>
-                플필에서 빠르게 캐스팅을 도와드리겠습니다.
+                PLFIL will be an agent in facilitating
+                <br />
+                your casting process.
               </Banner_SubTitle>
             </Banner_Text>
 
             <Banner_Btn>
-              <ContactBtn>캐스팅 문의</ContactBtn>
+              <ContactBtn>Casting Inqiry</ContactBtn>
             </Banner_Btn>
           </Content>
         </Inner>
@@ -78,14 +80,14 @@ const Header = styled.div`
 
 const Content = styled.div`
   width: 100%;
-  height: 386px;
+  height: 420px;
   background-color: transparent;
   /* background-color: blue; */
   padding: 80px 60px 80px;
 
   @media (max-width: 1080px) {
     height: 100%;
-    padding: 45px 68px 26px 28px;
+    padding: 45px 0px 26px 28px;
   }
 `;
 
@@ -150,27 +152,31 @@ const Banner_Text = styled.div`
 const Banner_Btn = styled.div`
   display: flex;
   height: auto;
-  margin: 92px 0 0 0px;
-
+  margin: 56px 0 0 0px;
+  /* width: 372px; */
   @media (max-width: 1080px) {
     margin: 0;
     width: 100%;
-    margin-top: 48px;
+    margin-top: 33px;
   }
 `;
 
 const Banner_Title = styled.h3`
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
   font-size: 60px;
+  font-style: normal;
   font-weight: 800;
-  color: white;
-  margin-bottom: 12px;
+  line-height: normal;
+  padding-bottom: 12px;
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
-    font-size: 28px;
-    width: 246px;
-    height: 33px;
+    font-size: 22px;
+    width: auto;
+    height: auto;
     margin-bottom: 8px;
+    padding-bottom: 0;
   }
 `;
 
@@ -178,17 +184,18 @@ const Banner_SubTitle = styled.h2`
   font-size: 30px;
   font-weight: 700;
   color: white;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
-    font-size: 16px;
+    font-size: 14px;
     width: 279px;
-    height: 28px;
+    height: auto;
   }
 `;
 
 const ContactBtn = styled.button`
-  width: 172px;
+  width: auto;
   height: 48px;
 
   border-radius: 2px;
@@ -204,7 +211,7 @@ const ContactBtn = styled.button`
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
-    width: 129px;
+    width: 162px;
     height: 35px;
     top: 200px;
     left: 28px;

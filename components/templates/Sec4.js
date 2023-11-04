@@ -2,14 +2,21 @@ import React from "react";
 import styled from "styled-components";
 
 const Sec4 = () => {
+  const innerText_pc = "Through PLFIL,<br/>discover the actor of your dreams.";
+
+  const innerText_mo =
+    "Through PLFIL,<br/>discover the actor of<br/>your dreams.";
+
   return (
     <Wrapper>
-      <Sec4_Text>
-        플필을 통해
-        <br />
-        원하시는 배우들을 캐스팅 해보세요!
-      </Sec4_Text>
-      <Sec4_Btn>캐스팅 문의</Sec4_Btn>
+      <Sec4_Text_pc
+        dangerouslySetInnerHTML={{ __html: innerText_pc }}
+      ></Sec4_Text_pc>
+
+      <Sec4_Text_mo
+        dangerouslySetInnerHTML={{ __html: innerText_mo }}
+      ></Sec4_Text_mo>
+      <Sec4_Btn>Casting Inqiry</Sec4_Btn>
     </Wrapper>
   );
 };
@@ -33,25 +40,40 @@ const Wrapper = styled.div`
   }
 `;
 
-const Sec4_Text = styled.div`
-  width: 670px;
-  height: 114px;
+const Sec4_Text_pc = styled.div`
+  width: 100vw;
+  height: auto;
+  color: #000;
   text-align: center;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 57.28px;
-  font-style: normal;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
   margin-bottom: 52px;
 
   // mobile 버전
   @media (max-width: 1080px) {
+    display: none;
+  }
+`;
+
+const Sec4_Text_mo = styled.div`
+  display: none;
+  // mobile 버전
+  @media (max-width: 1080px) {
+    display: flex;
+    width: auto;
+    height: auto;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.12);
+    margin-bottom: 52px;
     position: relative;
-    width: 257px;
-    height: 129px;
-    font-size: 36px;
-    line-height: 42.96px;
+    color: #000;
     text-align: center;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
   }
 `;
 

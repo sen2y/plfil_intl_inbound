@@ -5,9 +5,9 @@ const Sec1 = () => {
   return (
     <Wrapper>
       <Sec1_Title>
-        한국 배우가 필요하시다면
+        PLFIL will search a Korean actor
         <br />
-        빠르게 찾아드립니다
+        for your needs.
       </Sec1_Title>
 
       <Container_Wrapper>
@@ -17,9 +17,11 @@ const Sec1 = () => {
             alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText>
-            영어 / 일어 가능한
+            PLFIL have
             <br />
-            배우 리스트 보유중
+            English/Japanese-speaking
+            <br />
+            actors ready.
           </Sec1_SubText>
         </Sec1_Container>
         <Sec1_Container>
@@ -28,9 +30,11 @@ const Sec1 = () => {
             alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText>
-            오디션 공간 대여,
+            Available for venues
             <br />
-            스케쥴링 문의 가능
+            for auditions and
+            <br />
+            schedule inquiries.
           </Sec1_SubText>
         </Sec1_Container>
         <Sec1_Container>
@@ -39,8 +43,9 @@ const Sec1 = () => {
             alt="Korean actor casting platform Plfil"
           />
           <Sec1_SubText>
-            캐스팅 피<br />
-            출연료의 10%
+            Commission is
+            <br />
+            10% of on all works.
           </Sec1_SubText>
         </Sec1_Container>
       </Container_Wrapper>
@@ -74,7 +79,7 @@ const Sec1_Title = styled.div`
     width: auto;
     height: auto;
     font-weight: 700;
-    font-size: 6vw; //28px;
+    font-size: 5.5vw; //28px;
     /* font-size: ${window.innerWidth * 0.05 > "28px" ? "5vw" : "28px"}; */
     line-height: normal;
     text-align: center;
@@ -149,7 +154,7 @@ const Sec1_img = styled.img`
 
 const Sec1_SubText = styled.p`
   width: auto;
-  height: 58px;
+  height: auto;
   margin-top: 5px;
   font-weight: 600;
   font-size: 24px;

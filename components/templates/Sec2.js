@@ -11,9 +11,11 @@ const Sec2 = () => {
         />
         <Sec2_InnerContainer>
           <Sec2_InnerText>
-            배우 뿐만 아니라
+            Not only actors,
             <br />
-            촬영 스태프도 구인 가능합니다.
+            you also can hire
+            <br />
+            film crew members.
           </Sec2_InnerText>
 
           <Img_Wrapper>
@@ -24,11 +26,11 @@ const Sec2 = () => {
           </Img_Wrapper>
 
           <Sec2_InnerSubText>
-            영어로 소통이 가능하며,
+            Film crew members are fluent
             <br />
-            다국적 제작팀과 함께
+            in English and have experiences
             <br />
-            일해본 경험을 가진 스태프들이 있습니다.
+            in global film productions.
           </Sec2_InnerSubText>
         </Sec2_InnerContainer>
       </Sec2_Container>
@@ -88,8 +90,8 @@ const Sec2_InnerContainer = styled.div`
 
   @media (max-width: 1080px) {
     margin-top: 40px;
-    width: 255px;
-    height: 325px;
+    width: auto;
+    height: auto;
     align-items: center;
   }
 `;
@@ -99,15 +101,13 @@ const Sec2_InnerText = styled.h3`
   height: 96px;
   font-weight: 700;
   font-size: 40px;
-  line-height: 47.73px;
+  line-height: normal;
   text-align: right;
 
   @media (max-width: 1080px) {
     margin-left: 0px;
-    width: 184px;
-    height: 99px;
+    width: auto;
     font-size: 28px;
-    line-height: 33.41px;
     text-align: center;
   }
 `;
@@ -128,15 +128,14 @@ const Sec2_InnerSubText = styled.p`
   height: 87px;
   font-weight: 600;
   font-size: 24px;
-  line-height: 28.64px;
+  line-height: normal;
   text-align: right;
 
   @media (max-width: 1080px) {
     margin: 0;
-    width: 255px;
-    height: 57px;
+    width: auto;
+    height: auto;
     font-size: 16px;
-    line-height: 19.09px;
     text-align: center;
   }
 `;
