@@ -1,9 +1,39 @@
 import React from "react";
 import styled from "styled-components";
+import { useRef, useEffect } from "react";
 
 const Sec1 = () => {
+  const sec1Ref = useRef(null);
+
+  const handleScrollAnimation = (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate");
+      }
+    });
+  };
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // 필요에 따라 이 임계값을 조정합니다.
+    };
+
+    const observer = new IntersectionObserver(handleScrollAnimation, options);
+
+    if (sec1Ref.current) {
+      observer.observe(sec1Ref.current);
+    }
+
+    return () => {
+      if (sec1Ref.current) {
+        observer.unobserve(sec1Ref.current);
+      }
+    };
+  }, []);
   return (
-    <Wrapper>
+    <Wrapper ref={sec1Ref}>
       <Sec1_Title>
         PLFIL will search a Korean actor
         <br />
@@ -11,7 +41,7 @@ const Sec1 = () => {
       </Sec1_Title>
 
       <Container_Wrapper>
-        <Sec1_Container>
+        <Sec1_Container className="animate" delay={1.3}>
           <Sec1_img
             src="/assets/image/sec1/sec1_img1.png"
             alt="Korean actor casting platform Plfil"
@@ -24,7 +54,8 @@ const Sec1 = () => {
             actors ready.
           </Sec1_SubText>
         </Sec1_Container>
-        <Sec1_Container>
+
+        <Sec1_Container className="animate" delay={2.0}>
           <Sec1_img
             src="/assets/image/sec1/sec1_img2.png"
             alt="Korean actor casting platform Plfil"
@@ -37,7 +68,8 @@ const Sec1 = () => {
             schedule inquiries.
           </Sec1_SubText>
         </Sec1_Container>
-        <Sec1_Container>
+
+        <Sec1_Container className="animate" delay={2.7}>
           <Sec1_img
             src="/assets/image/sec1/sec1_img3.png"
             alt="Korean actor casting platform Plfil"
@@ -74,6 +106,34 @@ const Sec1_Title = styled.div`
   font-size: 40px;
   line-height: normal;
   color: black;
+
+  position: relative; // 위치 지정
+  opacity: 0;
+  /* animation: slideDown 1.5s ease-in-out forwards; // 왼쪽에서 오른쪽으로 슬라이드하는 애니메이션 적용
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  } */
+  animation: slideLeft 1.5s ease-in-out forwards; // 왼쪽에서 오른쪽으로 슬라이드하는 애니메이션 적용
+  //animation-delay: 1s; /* 1초 지연 추가 */
+
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
   @media (max-width: 1080px) {
     width: auto;
@@ -114,6 +174,22 @@ const Sec1_Container = styled.div`
   &:last-child {
     margin-right: 0;
   }
+
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: ${(props) => props.delay || 0}s;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   /* 
   @media (max-width: 1080px) {
     margin: 0px 0px 14px 0px;

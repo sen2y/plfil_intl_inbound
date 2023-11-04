@@ -9,7 +9,6 @@ import Footer from "@/components/templates/Footer";
 
 export default function Home() {
   return (
-    
     <Wrapper>
       <HelmetProvider>
         <Helmet>
@@ -26,7 +25,6 @@ export default function Home() {
             name="keywords"
             content="global, plfil, casting, casting platform, actor's profile, rising stars, casting board, korean top star, korean actors, korean casti0ng, korean actor, korean actress, korean actor casting, korean actor casting platform, korean actor casting service, korean actor casting website, korean actor casting site, "
           />
-          
         </Helmet>
       </HelmetProvider>
       <Banner />

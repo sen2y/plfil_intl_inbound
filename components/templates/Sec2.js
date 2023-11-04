@@ -1,7 +1,40 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 
 const Sec2 = () => {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5, // 스크롤이 뷰포트의 50%에 도달하면 콜백을 실행
+    };
+
+    const handleIntersection = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // 스크롤이 해당 컴포넌트에 도달하면 애니메이션을 추가
+          containerRef.current.classList.add("animate");
+        } else {
+          // 스크롤이 해당 컴포넌트 밖으로 나가면 애니메이션을 제거
+          containerRef.current.classList.remove("animate");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, options);
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
+
+    return () => {
+      if (containerRef.current) {
+        observer.unobserve(containerRef.current);
+      }
+    };
+  }, []);
+
   return (
     <Wrapper>
       <Sec2_Container>
@@ -9,7 +42,7 @@ const Sec2 = () => {
           src="/assets/image/sec2/sec2_img1.png"
           alt="Korean actor casting platform Plfil"
         />
-        <Sec2_InnerContainer>
+        <Sec2_InnerContainer ref={containerRef} className="animate">
           <Sec2_InnerText>
             Not only actors,
             <br />
@@ -26,11 +59,11 @@ const Sec2 = () => {
           </Img_Wrapper>
 
           <Sec2_InnerSubText>
-            Film crew members are fluent
+            영어로 소통이 가능하며,
             <br />
-            in English and have experiences
+            다국적 제작팀과 함께
             <br />
-            in global film productions.
+            일해본 경험을 가진 스태프들이 있습니다.
           </Sec2_InnerSubText>
         </Sec2_InnerContainer>
       </Sec2_Container>
@@ -78,6 +111,35 @@ const Img_Wrapper = styled.div`
   }
 `;
 
+// const Sec2_img = styled.img`
+//   width: 100%;
+
+//   opacity: 0; /* 초기에 투명 */
+//   transition: opacity 1.5s;
+
+//   &.animate {
+//     opacity: 1; /* 스크롤 시 표시되도록 투명에서 불투명으로 변경 */
+//   }
+// `;
+
+// const Sec2_InnerContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-end;
+//   height: 400px;
+//   opacity: 0; /* 초기에 투명 */
+//   transition: opacity 1.5s;
+
+//   &.animate {
+//     opacity: 1; /* 스크롤 시 표시되도록 투명에서 불투명으로 변경 */
+//   }
+//   @media (max-width: 1080px) {
+//     margin-top: 40px;
+//     width: auto;
+//     height: auto;
+//     align-items: center;
+//   }
+// `;
 const Sec2_img = styled.img`
   width: 100%;
 `;
@@ -87,6 +149,13 @@ const Sec2_InnerContainer = styled.div`
   flex-direction: column;
   align-items: flex-end;
   height: 400px;
+
+  opacity: 0; /* 초기에 투명 */
+  transition: opacity 2s;
+
+  &.animate {
+    opacity: 1; /* 스크롤 시 표시되도록 투명에서 불투명으로 변경 */
+  }
 
   @media (max-width: 1080px) {
     margin-top: 40px;
@@ -128,14 +197,15 @@ const Sec2_InnerSubText = styled.p`
   height: 87px;
   font-weight: 600;
   font-size: 24px;
-  line-height: normal;
+  line-height: 28.64px;
   text-align: right;
 
   @media (max-width: 1080px) {
     margin: 0;
-    width: auto;
-    height: auto;
+    width: 255px;
+    height: 57px;
     font-size: 16px;
+    line-height: 19.09px;
     text-align: center;
   }
 `;

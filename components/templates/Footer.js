@@ -114,7 +114,6 @@ const TextSec = styled.div`
   display: flex;
   align-items: flex-end;
   margin-right: 10px;
-  background-color: yellow;
 
   @media (max-width: 1080px) {
     /* margin: 24px 0 0 0; */
@@ -140,7 +139,6 @@ const Text_Btn = styled.p`
 `;
 
 const Sec2 = styled.div`
-  background-color: tomato;
   display: flex;
   justify-content: flex-end;
   width: 100%;
@@ -149,11 +147,6 @@ const Sec2 = styled.div`
   // mobile 버전
   @media (max-width: 1080px) {
     display: none;
-    /* justify-content: flex-end;
-    margin: 0;
-    :last-child {
-      margin-right: 10px;
-    } */
   }
 `;
 

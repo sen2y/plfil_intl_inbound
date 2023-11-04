@@ -143,6 +143,18 @@ const Banner_Text = styled.div`
   flex-direction: column;
   height: auto;
 
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   /* mobile 버전 */
   @media (max-width: 1080px) {
     width: 100%;
@@ -208,6 +220,17 @@ const ContactBtn = styled.button`
   font-size: 20px;
   font-weight: 700;
   line-height: 23.87px;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
