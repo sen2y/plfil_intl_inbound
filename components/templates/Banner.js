@@ -52,14 +52,12 @@ const Wrapper = styled.div`
 
 const WrapperBack = styled.div`
   display: flex;
-  justify-content: center;
   width: 100%;
   height: 466px;
   z-index: 2;
   background: linear-gradient(180deg, #000 -4.29%, rgba(0, 0, 0, 0) 100%);
 
   @media (max-width: 1080px) {
-    height: 244px;
   }
 `;
 

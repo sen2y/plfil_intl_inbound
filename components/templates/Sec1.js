@@ -67,15 +67,16 @@ const Sec1_Title = styled.div`
   margin-bottom: 35px;
   font-weight: 700;
   font-size: 40px;
-  line-height: 47.73px;
+  line-height: normal;
   color: black;
 
   @media (max-width: 1080px) {
-    width: 280px;
-    height: 66px;
+    width: auto;
+    height: auto;
     font-weight: 700;
-    font-size: 28px;
-    line-height: 33.41px;
+    font-size: 6vw; //28px;
+    /* font-size: ${window.innerWidth * 0.05 > "28px" ? "5vw" : "28px"}; */
+    line-height: normal;
     text-align: center;
     margin-bottom: 20px;
   }
@@ -104,11 +105,19 @@ const Sec1_Container = styled.div`
   &:last-child {
     margin-right: 0;
   }
-
+  /* 
   @media (max-width: 1080px) {
     margin: 0px 0px 14px 0px;
     height: 174px;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+  } */
+  @media (max-width: 1080px) {
+    width: 100%; // 전체 폭을 사용
+    height: auto; // 높이를 자동으로 조절
+    margin: 0px 0px 14px 0px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -119,9 +128,18 @@ const Sec1_img = styled.img`
   width: 210px;
   height: 168px;
 
-  @media (max-width: 1080px) {
+  /* @media (max-width: 1080px) {
     width: 140px;
     height: 106px;
+  } */
+  @media (max-width: 1080px) {
+    width: 30%; // 부모 요소에 상대적으로 크기 조절
+    height: auto; // 높이를 자동으로 조절
+  }
+
+  @media (min-width: 600px) and (max-width: 1080px) {
+    width: (140 * 1.5) px;
+    height: (106 * 1.5) px;
   }
 `;
 
@@ -135,11 +153,23 @@ const Sec1_SubText = styled.p`
   text-align: center;
 
   @media (max-width: 1080px) {
-    top: 200px;
-    height: 38px;
-    font-size: 16px;
-    line-height: 19.09px;
+    /* top: 200px; */
+    height: auto;
+    /* font-size: 16px;
+    line-height: 19.09px; */
+    font-size: 4vw;
+    line-height: normal; // 비율에 따라 조절
   }
+
+  /* @media (min-width: 600px) and (max-width: 1080px) {
+    width: auto;
+    height: auto;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 20px;
+  } */
 `;
 
 export default Sec1;
