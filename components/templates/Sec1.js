@@ -80,6 +80,10 @@ const Sec1_Title = styled.div`
     text-align: center;
     margin-bottom: 20px;
   }
+
+  @media (min-width: 600px) and (max-width: 1080px) {
+    font-size: 28px;
+  }
 `;
 
 const Container_Wrapper = styled.div`
@@ -138,8 +142,8 @@ const Sec1_img = styled.img`
   }
 
   @media (min-width: 600px) and (max-width: 1080px) {
-    width: (140 * 1.5) px;
-    height: (106 * 1.5) px;
+    width: 210px;
+    /* height: 168px; */
   }
 `;
 
@@ -153,7 +157,7 @@ const Sec1_SubText = styled.p`
   text-align: center;
 
   @media (max-width: 1080px) {
-    /* top: 200px; */
+    /* */
     height: auto;
     /* font-size: 16px;
     line-height: 19.09px; */
@@ -161,7 +165,8 @@ const Sec1_SubText = styled.p`
     line-height: normal; // 비율에 따라 조절
   }
 
-  /* @media (min-width: 600px) and (max-width: 1080px) {
+  @media (min-width: 600px) and (max-width: 1080px) {
+    top: 200px;
     width: auto;
     height: auto;
     font-weight: 700;
@@ -169,7 +174,7 @@ const Sec1_SubText = styled.p`
     line-height: normal;
     text-align: center;
     margin-bottom: 20px;
-  } */
+  }
 `;
 
 export default Sec1;

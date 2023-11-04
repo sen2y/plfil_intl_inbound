@@ -5,26 +5,24 @@ const Banner = () => {
   return (
     <>
       <Wrapper>
-        <WrapperBack>
-          <Inner>
-            <Header>
-              <Logo>PLFIL</Logo>
-              <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
-            </Header>
-            <Content>
-              <Banner_Text>
-                <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
-                <Banner_SubTitle>
-                  플필에서 빠르게 캐스팅을 도와드리겠습니다.
-                </Banner_SubTitle>
-              </Banner_Text>
+        <Inner>
+          <Header>
+            <Logo>PLFIL</Logo>
+            <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
+          </Header>
+          <Content>
+            <Banner_Text>
+              <Banner_Title>배우를 찾고 계신가요?</Banner_Title>
+              <Banner_SubTitle>
+                플필에서 빠르게 캐스팅을 도와드리겠습니다.
+              </Banner_SubTitle>
+            </Banner_Text>
 
-              <Banner_Btn>
-                <ContactBtn>캐스팅 문의</ContactBtn>
-              </Banner_Btn>
-            </Content>
-          </Inner>
-        </WrapperBack>
+            <Banner_Btn>
+              <ContactBtn>캐스팅 문의</ContactBtn>
+            </Banner_Btn>
+          </Content>
+        </Inner>
       </Wrapper>
     </>
   );
@@ -36,7 +34,8 @@ const Wrapper = styled.div`
   align-items: center;
   width: 100%;
   height: 500px;
-  background: url("/assets/image/banner/global_banner.png") no-repeat;
+  background: linear-gradient(180deg, #000 -4.29%, rgba(0, 0, 0, 0) 100%),
+    url("/assets/image/banner/global_banner.png") no-repeat;
   background-size: cover;
   background-position: 90% center;
   z-index: 1;
@@ -47,17 +46,6 @@ const Wrapper = styled.div`
     background-color: pink;
     background-position: 45% 55%;
     background-size: 250%;
-  }
-`;
-
-const WrapperBack = styled.div`
-  display: flex;
-  width: 100%;
-  height: 466px;
-  z-index: 2;
-  background: linear-gradient(180deg, #000 -4.29%, rgba(0, 0, 0, 0) 100%);
-
-  @media (max-width: 1080px) {
   }
 `;
 
