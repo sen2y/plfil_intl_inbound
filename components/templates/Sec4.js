@@ -5,7 +5,6 @@ import Link from "next/link";
 
 const Sec4 = () => {
   const innerText_pc = "Through PLFIL,<br/>discover the actor of your dreams.";
-
   const innerText_mo =
     "Through PLFIL,<br/>discover the actor of<br/>your dreams.";
 
