@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
 
 const Banner = () => {
   return (
@@ -10,19 +11,24 @@ const Banner = () => {
             <Logo>PLFIL</Logo>
             <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
           </Header>
-          <Content>
-            <Banner_Text>
-              <Banner_Title>Looking for a qualified actor?</Banner_Title>
-              <Banner_SubTitle>
-                PLFIL will be an agent in facilitating
-                <br />
-                your casting process.
-              </Banner_SubTitle>
-            </Banner_Text>
 
-            <Banner_Btn>
-              <ContactBtn>Casting Inqiry</ContactBtn>
-            </Banner_Btn>
+          <Content>
+            <Fade duration={3000}>
+              <Banner_Text>
+                <Banner_Title>Looking for a qualified actor?</Banner_Title>
+                <Banner_SubTitle>
+                  PLFIL will be an agent in facilitating
+                  <br />
+                  your casting process.
+                </Banner_SubTitle>
+              </Banner_Text>{" "}
+            </Fade>
+
+            <Fade left distance="50px" delay={500} duration={1000}>
+              <Banner_Btn>
+                <ContactBtn>Casting Inqiry</ContactBtn>
+              </Banner_Btn>
+            </Fade>
           </Content>
         </Inner>
       </Wrapper>
@@ -103,7 +109,7 @@ const Logo = styled.p`
   margin: 0px 16px;
   color: transparent;
   background-image: linear-gradient(93.27deg, #ff1744 0%, #ff4512 100%);
-  background-clip: text; //텍스트만 그라데이션을 보이도록 클리핑
+  background-clip: text;
   -webkit-background-clip: text; /* 웹킷 브라우저 지원을 위해 추가*/
 
   /* mobile 버전 */
@@ -132,7 +138,6 @@ const HeaderBtn2 = styled.button`
     width: 133px;
     height: 30px;
     font-size: 12px;
-    line-height: 22px;
     font-weight: 700;
     margin: 0;
   }
@@ -142,18 +147,6 @@ const Banner_Text = styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
-
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out forwards;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
@@ -165,7 +158,7 @@ const Banner_Btn = styled.div`
   display: flex;
   height: auto;
   margin: 56px 0 0 0px;
-  /* width: 372px; */
+
   @media (max-width: 1080px) {
     margin: 0;
     width: 100%;
@@ -179,7 +172,6 @@ const Banner_Title = styled.h3`
   font-size: 60px;
   font-style: normal;
   font-weight: 800;
-  line-height: normal;
   padding-bottom: 12px;
 
   /* mobile 버전 */
@@ -197,6 +189,7 @@ const Banner_SubTitle = styled.h2`
   font-weight: 700;
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);
+  line-height: normal;
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
@@ -207,39 +200,18 @@ const Banner_SubTitle = styled.h2`
 `;
 
 const ContactBtn = styled.button`
-  width: auto;
-  height: 48px;
-
   border-radius: 2px;
   border: none;
   padding: 12px 40px;
-  gap: 10px;
   cursor: pointer;
   background-image: linear-gradient(93.27deg, #ff1744 0%, #ff4512 100%);
   color: white;
   font-size: 20px;
   font-weight: 700;
-  line-height: 23.87px;
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 
   /* mobile 버전 */
   @media (max-width: 1080px) {
-    width: 162px;
-    height: 35px;
-    top: 200px;
-    left: 28px;
     font-size: 16px;
-    line-height: 19.09px;
     font-weight: 700;
     padding: 8px 28px;
   }

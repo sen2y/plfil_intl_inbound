@@ -21,7 +21,7 @@ const Sec3 = () => {
     "/assets/image/sec3/sec3_sub6.png",
   ];
   const breakpoints = [
-    { breakpoint: 1440, slidesToShow: 6 },
+    // slideToshow를 설정했을때 반응형에서 간격이 안맞아서 화면크기별로 재설정해주는 방향으로 구현했습니다.
     { breakpoint: 1080, slidesToShow: 8 },
     { breakpoint: 900, slidesToShow: 7 },
     { breakpoint: 800, slidesToShow: 6 },
@@ -29,6 +29,7 @@ const Sec3 = () => {
     { breakpoint: 580, slidesToShow: 4 },
     { breakpoint: 480, slidesToShow: 3 },
   ];
+
   const settings = {
     dots: false,
     infinite: true,
@@ -58,16 +59,14 @@ const Sec3 = () => {
     <Wrapper>
       <Div>
         <Sec3_Container>
-          <Fade duration={1000}>
-            <Sec3_InnerText_mo
-              dangerouslySetInnerHTML={{ __html: innerText_mo }}
-            ></Sec3_InnerText_mo>
-            <PC_Text>
-              <Sec3_InnerText
-                dangerouslySetInnerHTML={{ __html: innerText_pc }}
-              ></Sec3_InnerText>
-            </PC_Text>
-          </Fade>
+          <Sec3_InnerText_mo
+            dangerouslySetInnerHTML={{ __html: innerText_mo }}
+          ></Sec3_InnerText_mo>
+          <PC_Text>
+            <Sec3_InnerText
+              dangerouslySetInnerHTML={{ __html: innerText_pc }}
+            ></Sec3_InnerText>
+          </PC_Text>
 
           <Sec3_img>
             <MoDiv>
@@ -105,6 +104,10 @@ const ImageWrapper = styled.div`
   border-radius: 2px;
   margin-right: 10px;
   overflow: hidden;
+
+  &:focus {
+    outline: none; // 클릭 시 생기는 border 제거
+  }
 `;
 
 const PC_Text = styled.div`
@@ -124,10 +127,8 @@ const Wrapper = styled.div`
 
   // mobile 버전
   @media (max-width: 1080px) {
-    flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    width: 100%;
     height: 100%;
     padding: 0;
   }
@@ -136,11 +137,9 @@ const Div = styled.div`
   width: 100%;
   height: 588px;
   position: relative;
-  z-index: 1;
 
   @media (max-width: 1080px) {
     height: 459px;
-    /* background-color: pink; */
   }
 `;
 const Sec3_Container = styled.div`
@@ -164,7 +163,6 @@ const Sec3_Container = styled.div`
     background-size: 200%;
     background-position: 50% 25%;
   }
-  /* } */
 `;
 
 const Sec3_img = styled.div`
@@ -214,9 +212,9 @@ const MoDiv2 = styled.div`
 
 const InnerImg_big = styled.img`
   width: 232px;
-
   border-radius: 2px;
   margin-right: 12px;
+
   // mobile 버전
   @media (max-width: 1080px) {
     width: 160px;
@@ -234,8 +232,6 @@ const InnerImg_small = styled.img`
   &:last-child {
     margin-right: 0;
   }
-
-  // mobile 버전
 `;
 
 const Sec3_InnerText = styled.h2`
@@ -258,6 +254,7 @@ const Sec3_InnerText = styled.h2`
 
 const Sec3_InnerText_mo = styled.h2`
   display: none;
+
   // mobile 버전
   @media (max-width: 1080px) {
     display: flex;

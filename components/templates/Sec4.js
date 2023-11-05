@@ -15,11 +15,13 @@ const Sec4 = () => {
           dangerouslySetInnerHTML={{ __html: innerText_pc }}
         ></Sec4_Text_pc>
       </Fade>
-      <Fade bottom delay={500}>
+      <Fade duration={3000}>
         <Sec4_Text_mo
           dangerouslySetInnerHTML={{ __html: innerText_mo }}
         ></Sec4_Text_mo>
-        <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+        <Fade bottom duration={3000} delay={500}>
+          <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+        </Fade>
       </Fade>
     </Wrapper>
   );
@@ -64,6 +66,7 @@ const Sec4_Text_pc = styled.div`
 
 const Sec4_Text_mo = styled.div`
   display: none;
+
   // mobile 버전
   @media (max-width: 1080px) {
     display: flex;
@@ -84,7 +87,6 @@ const Sec4_Text_mo = styled.div`
 const Sec4_Btn = styled.button`
   width: 280px;
   height: 57px;
-  gap: 10px;
   padding: 12px 40px;
   border-radius: 2px;
   background: transparent;
@@ -94,7 +96,6 @@ const Sec4_Btn = styled.button`
   cursor: pointer;
   font-weight: 700;
   font-size: 28px;
-  line-height: 33.41px;
   text-align: center;
 
   // mobile 버전
