@@ -14,51 +14,45 @@ const Sec1 = () => {
       </Fade>
 
       <Container_Wrapper>
-        <Sec1_Container>
-          <Fade bottom distance={"50px"} delay={1300} duration={2000}>
-            <Sec1_img
-              src="/assets/image/sec1/sec1_img1.png"
-              alt="Korean actor casting platform Plfil"
-            />
-            <Sec1_SubText>
-              PLFIL have
-              <br />
-              English/Japanese-speaking
-              <br />
-              actors ready.
-            </Sec1_SubText>
-          </Fade>
+        <Sec1_Container delay={1300}>
+          <Sec1_img
+            src="/assets/image/sec1/sec1_img1.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec1_SubText>
+            PLFIL have
+            <br />
+            English/Japanese-speaking
+            <br />
+            actors ready.
+          </Sec1_SubText>
         </Sec1_Container>
 
-        <Sec1_Container>
-          <Fade bottom distance={"50px"} delay={2000} duration={2000}>
-            <Sec1_img
-              src="/assets/image/sec1/sec1_img2.png"
-              alt="Korean actor casting platform Plfil"
-            />
-            <Sec1_SubText>
-              Available for venues
-              <br />
-              for auditions and
-              <br />
-              schedule inquiries.
-            </Sec1_SubText>
-          </Fade>
+        <Sec1_Container delay={2000}>
+          <Sec1_img
+            src="/assets/image/sec1/sec1_img2.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec1_SubText>
+            Available for venues
+            <br />
+            for auditions and
+            <br />
+            schedule inquiries.
+          </Sec1_SubText>
         </Sec1_Container>
 
-        <Fade bottom distance={"50px"} delay={2700} duration={2000}>
-          <Sec1_Container>
-            <Sec1_img
-              src="/assets/image/sec1/sec1_img3.png"
-              alt="Korean actor casting platform Plfil"
-            />
-            <Sec1_SubText>
-              Commission is
-              <br />
-              10% of on all works.
-            </Sec1_SubText>
-          </Sec1_Container>
-        </Fade>
+        <Sec1_Container delay={2700}>
+          <Sec1_img
+            src="/assets/image/sec1/sec1_img3.png"
+            alt="Korean actor casting platform Plfil"
+          />
+          <Sec1_SubText>
+            Commission is
+            <br />
+            10% of on all works.
+          </Sec1_SubText>
+        </Sec1_Container>
       </Container_Wrapper>
     </Wrapper>
   );
@@ -85,6 +79,7 @@ const Sec1_Title = styled.div`
   font-size: 40px;
   line-height: normal;
   color: black;
+  position: relative; // 위치 지정
 
   @media (max-width: 1080px) {
     width: auto;
@@ -125,10 +120,25 @@ const Sec1_Container = styled.div`
     margin-right: 0;
   }
 
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: ${(props) => props.delay || 0}ms;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   @media (max-width: 1080px) {
     width: 100%;
     height: auto;
-    margin: 0px 0px 14px;
+    margin: 0px 0px 14px 0px;
     &:last-child {
       margin-bottom: 0;
     }
@@ -140,7 +150,7 @@ const Sec1_img = styled.img`
   height: 168px;
 
   @media (max-width: 1080px) {
-    width: 30%;
+    width: 30%; // 부모 요소에 상대적으로 크기 조절
     height: auto;
   }
 
@@ -155,16 +165,23 @@ const Sec1_SubText = styled.p`
   margin-top: 5px;
   font-weight: 600;
   font-size: 24px;
-  line-height: normal;
+  line-height: 28.64px;
   text-align: center;
 
   @media (max-width: 1080px) {
+    height: auto;
     font-size: 4vw;
+    line-height: normal;
   }
 
   @media (min-width: 600px) and (max-width: 1080px) {
+    top: 200px;
+    width: auto;
+    height: auto;
     font-weight: 700;
     font-size: 24px;
+    line-height: normal;
+    text-align: center;
     margin-bottom: 20px;
   }
 `;

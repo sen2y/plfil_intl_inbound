@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-reveal";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -9,7 +10,9 @@ const Banner = () => {
         <Inner>
           <Header>
             <Logo>PLFIL</Logo>
-            <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
+            <LinkNoUnderline href={""} passHref>
+              <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
+            </LinkNoUnderline>
           </Header>
 
           <Content>
@@ -25,9 +28,12 @@ const Banner = () => {
             </Fade>
 
             <Fade left distance="50px" delay={500} duration={1000}>
-              <Banner_Btn>
-                <ContactBtn>Casting Inqiry</ContactBtn>
-              </Banner_Btn>
+              <LinkNoUnderline href={""} passHref>
+                {" "}
+                <Banner_Btn>
+                  <ContactBtn>Casting Inqiry</ContactBtn>
+                </Banner_Btn>{" "}
+              </LinkNoUnderline>
             </Fade>
           </Content>
         </Inner>
@@ -35,6 +41,10 @@ const Banner = () => {
     </>
   );
 };
+
+const LinkNoUnderline = styled(Link)`
+  text-decoration: none;
+`;
 
 const Wrapper = styled.div`
   display: flex;
