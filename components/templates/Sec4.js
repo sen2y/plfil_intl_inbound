@@ -19,23 +19,26 @@ const Sec4 = () => {
         <Sec4_Text_mo
           dangerouslySetInnerHTML={{ __html: innerText_mo }}
         ></Sec4_Text_mo>
-        <Fade bottom duration={3000} delay={500}>
-          <LinkNoUnderline
-            href={""}
-            passHref
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Sec4_Btn>Casting Inqiry</Sec4_Btn>
-          </LinkNoUnderline>
-        </Fade>
       </Fade>
+      <LinkNoUnderline
+        href={""}
+        passHref
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+      </LinkNoUnderline>
     </Wrapper>
   );
 };
 
 const LinkNoUnderline = styled(Link)`
   text-decoration: none;
+  width: 100%;
+`;
+
+const FadeN = styled(Fade)`
+  width: 100%;
 `;
 
 const Wrapper = styled.div`
@@ -108,7 +111,29 @@ const Sec4_Btn = styled.button`
   font-weight: 700;
   font-size: 28px;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 3s ease-in-out forwards;
+  animation-delay: ${(props) => props.delay || 0}ms;
 
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 1080px) {
+    width: 100%;
+    height: auto;
+    margin: 0px 0px 14px 0px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   // mobile 버전
   @media (max-width: 1080px) {
     width: 100%;
