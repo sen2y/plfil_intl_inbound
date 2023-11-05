@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import styled from "styled-components";
-import { Fade } from "react-reveal";
 
 const Sec3 = () => {
   const images = [
@@ -218,7 +217,7 @@ const InnerImg_big = styled.img`
   // mobile 버전
   @media (max-width: 1080px) {
     width: 160px;
-    padding: 60px 0 0 12px;
+    padding: 87px 0 12px 12px;
     margin: 0;
   }
 `;

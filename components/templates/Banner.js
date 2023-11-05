@@ -10,7 +10,12 @@ const Banner = () => {
         <Inner>
           <Header>
             <Logo>PLFIL</Logo>
-            <LinkNoUnderline href={""} passHref>
+            <LinkNoUnderline
+              href="https://www.plfil.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              passHref
+            >
               <HeaderBtn2>Main Service Site &gt;</HeaderBtn2>
             </LinkNoUnderline>
           </Header>
@@ -24,15 +29,19 @@ const Banner = () => {
                   <br />
                   your casting process.
                 </Banner_SubTitle>
-              </Banner_Text>{" "}
+              </Banner_Text>
             </Fade>
 
             <Fade left distance="50px" delay={500} duration={1000}>
-              <LinkNoUnderline href={""} passHref>
-                {" "}
+              <LinkNoUnderline
+                href={""}
+                target="_blank"
+                rel="noopener noreferrer"
+                passHref
+              >
                 <Banner_Btn>
                   <ContactBtn>Casting Inqiry</ContactBtn>
-                </Banner_Btn>{" "}
+                </Banner_Btn>
               </LinkNoUnderline>
             </Fade>
           </Content>

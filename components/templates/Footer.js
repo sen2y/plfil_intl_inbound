@@ -8,59 +8,118 @@ const Footer = () => {
       <Inner>
         <Sec1>
           <Logo src="/assets/image/footer/logo.png" />
+
           <TextSection>
-            <LinkNoUnderline href={"https://www.plfil.com/about"} passHref>
+            <LinkNoUnderline
+              href={"https://www.plfil.com/about"}
+              passHref
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <TextButton>서비스 소개</TextButton>
             </LinkNoUnderline>
             <Gap />
             <LinkNoUnderline
               href={"https://www.plfil.com/policy?mode=PrivacyPolicy"}
               passHref
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <TextButton>개인정보처리방침 및 이용약관</TextButton>
             </LinkNoUnderline>
           </TextSection>
+
           <Sec2Mobile>
-            <Link href="https://www.instagram.com/plfil_official/" passHref>
+            <Link
+              href="https://www.instagram.com/plfil_official/"
+              passHref
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SNSButton src="/assets/image/footer/insta.png"></SNSButton>
             </Link>
-            <Link href="https://pf.kakao.com/_yYxiAxj" passHref>
+            <Link
+              href="https://pf.kakao.com/_yYxiAxj"
+              passHref
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SNSButton src="/assets/image/footer/kakao.png"></SNSButton>
             </Link>
-            <Link href="https://pf.kakao.com/_GxaxcLxj" passHref>
+            <Link
+              href="https://pf.kakao.com/_GxaxcLxj"
+              passHref
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SNSButton src="/assets/image/footer/plus.png"></SNSButton>
             </Link>
-            <Link href="https://blog.naver.com/plfil" passHref>
+            <Link
+              href="https://blog.naver.com/plfil"
+              passHref
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <SNSButton src="/assets/image/footer/blog.png"></SNSButton>
             </Link>
           </Sec2Mobile>
         </Sec1>
+
         <Sec2>
-          <Link href="https://www.instagram.com/plfil_official/" passHref>
+          <Link
+            href="https://www.instagram.com/plfil_official/"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <SNSButton src="/assets/image/footer/insta.png"></SNSButton>
           </Link>
-          <Link href="https://pf.kakao.com/_yYxiAxj" passHref>
+          <Link
+            href="https://pf.kakao.com/_yYxiAxj"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <SNSButton src="/assets/image/footer/kakao.png"></SNSButton>
           </Link>
-          <Link href="https://pf.kakao.com/_GxaxcLxj" passHref>
+          <Link
+            href="https://pf.kakao.com/_GxaxcLxj"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <SNSButton src="/assets/image/footer/plus.png"></SNSButton>
           </Link>
-          <Link href="https://blog.naver.com/plfil" passHref>
+          <Link
+            href="https://blog.naver.com/plfil"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <SNSButton src="/assets/image/footer/blog.png"></SNSButton>
           </Link>
         </Sec2>
+
         <TextSectionMobile>
-          <LinkNoUnderline href={"https://www.plfil.com/about"} passHref>
+          <LinkNoUnderline
+            href={"https://www.plfil.com/about"}
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <TextButton>서비스 소개</TextButton>
           </LinkNoUnderline>
           <Gap />
           <LinkNoUnderline
             href={"https://www.plfil.com/policy?mode=PrivacyPolicy"}
             passHref
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <TextButton>개인정보처리방침 및 이용약관</TextButton>
           </LinkNoUnderline>
         </TextSectionMobile>
+
         <Sec3>
           <Text>
             (주)플필 | 대표자 : 류민국 | 사업자등록번호 : 430-87-02549 |

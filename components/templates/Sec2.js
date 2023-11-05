@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-reveal";
+import Image from "next/image";
 
 const Sec2 = () => {
   return (
@@ -26,6 +27,8 @@ const Sec2 = () => {
               <Sec2_InnerImg
                 src="/assets/image/sec2/sec2_img2.png"
                 alt="Korean actor casting platform Plfil"
+                width={101}
+                height={101}
               />
             </Img_Wrapper>
 
@@ -115,9 +118,7 @@ const Sec2_InnerText = styled.h3`
   }
 `;
 
-const Sec2_InnerImg = styled.img`
-  width: 101px;
-  height: 101px;
+const Sec2_InnerImg = styled(Image)`
   margin: 80px 0px 0px 437px;
 
   @media (max-width: 1080px) {
@@ -139,6 +140,7 @@ const Sec2_InnerSubText = styled.p`
     width: auto;
     height: 57px;
     text-align: center;
+    font-size: 16px;
   }
 `;
 

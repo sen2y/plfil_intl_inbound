@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Fade } from "react-reveal";
+import Link from "next/link";
 
 const Sec4 = () => {
   const innerText_pc = "Through PLFIL,<br/>discover the actor of your dreams.";
@@ -20,12 +21,23 @@ const Sec4 = () => {
           dangerouslySetInnerHTML={{ __html: innerText_mo }}
         ></Sec4_Text_mo>
         <Fade bottom duration={3000} delay={500}>
-          <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+          <LinkNoUnderline
+            href={""}
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+          </LinkNoUnderline>
         </Fade>
       </Fade>
     </Wrapper>
   );
 };
+
+const LinkNoUnderline = styled(Link)`
+  text-decoration: none;
+`;
 
 const Wrapper = styled.div`
   display: flex;
