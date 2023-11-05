@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Fade } from "react-reveal";
 
 const Sec4 = () => {
   const innerText_pc = "Through PLFIL,<br/>discover the actor of your dreams.";
@@ -9,14 +10,17 @@ const Sec4 = () => {
 
   return (
     <Wrapper>
-      <Sec4_Text_pc
-        dangerouslySetInnerHTML={{ __html: innerText_pc }}
-      ></Sec4_Text_pc>
-
-      <Sec4_Text_mo
-        dangerouslySetInnerHTML={{ __html: innerText_mo }}
-      ></Sec4_Text_mo>
-      <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+      <Fade>
+        <Sec4_Text_pc
+          dangerouslySetInnerHTML={{ __html: innerText_pc }}
+        ></Sec4_Text_pc>
+      </Fade>
+      <Fade bottom delay={500}>
+        <Sec4_Text_mo
+          dangerouslySetInnerHTML={{ __html: innerText_mo }}
+        ></Sec4_Text_mo>
+        <Sec4_Btn>Casting Inqiry</Sec4_Btn>
+      </Fade>
     </Wrapper>
   );
 };
