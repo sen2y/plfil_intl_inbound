@@ -33,8 +33,11 @@ const Sec4 = () => {
 };
 
 const LinkNoUnderline = styled(Link)`
+  display: flex;
   text-decoration: none;
   width: 100%;
+  justify-content: center;
+  align-items: center;
 `;
 
 const FadeN = styled(Fade)`
@@ -118,7 +121,7 @@ const Sec4_Btn = styled.button`
   @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateY(50px);
+      transform: translateY(10px);
     }
     to {
       opacity: 1;
@@ -134,6 +137,7 @@ const Sec4_Btn = styled.button`
       margin-bottom: 0;
     }
   }
+
   // mobile 버전
   @media (max-width: 1080px) {
     width: 100%;
