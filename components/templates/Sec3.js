@@ -26,7 +26,9 @@ const Sec3 = () => {
     { breakpoint: 800, slidesToShow: 6 },
     { breakpoint: 700, slidesToShow: 5 },
     { breakpoint: 580, slidesToShow: 4 },
-    { breakpoint: 480, slidesToShow: 3 },
+    { breakpoint: 480, slidesToShow: 3.3 },
+    { breakpoint: 429, slidesToShow: 3 },
+    { breakpoint: 389, slidesToShow: 2.7 },
   ];
 
   const settings = {
